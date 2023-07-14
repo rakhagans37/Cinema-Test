@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA Cinema</title>
+    <link rel="stylesheet" href="../style/topup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/Home.png" alt=""></a>
+        <div>
+            <h1>Withdrawal</h1>
+        </div>
+    </header>
+    <main>
+        <form id="input-nominal" style="display: none;">
+            <div id="payment-radio" class="payment-radio">
+                <div class="radio-child">
+                    <label for="gopay">
+                        <input type="radio" value="Gopay" id="gopay" name="payment-method-choose" required >
+                        Gopay
+                    </label>
+                </div>
+                <div class="radio-child">
+                    <label for="ovo">
+                        <input type="radio" value="Ovo" id="ovo" name="payment-method-choose" required>
+                        Ovo
+                    </label>
+                </div>
+                <div class="radio-child">
+                    <label for="dana">
+                        <input type="radio" value="Dana" id="dana" name="payment-method-choose" required>
+                        Dana
+                    </label>
+                </div>
+            </div>
+            <div class="nomor-container" id="nomor-container">
+                <label for="nomor"></label>
+                <input type="text" id="nomor" placeholder="Masukkan nomor Anda Disini" required>
+            </div>
+            <div class="nominal-container" id="nominal-container">
+                <label for="nominal"></label>
+                <input type="text" id="nominal" placeholder="Masukkan Nominal Yang Ingin Ditarik" required>
+            </div>
+            <div class="button-input">
+                <button id="submit">Top Up</button>
+            </div>
+        </form>
+        <form id="input-nominal2" style="display: none;">
+            <div id="payment-radio2" class="payment-radio">
+            </div>
+            <div class="nominal-container" id="nominal-container2">
+                <label for="nominal2"></label>
+                <input type="text" id="nominal2" placeholder="Masukkan Nominal Top Up Anda Disini" required>
+            </div>
+            <div class="button-input">
+                <button id="submit2">Top Up</button>
+            </div>
+        </form>
+    </main>
+    <section id="section" style="display: none;">
+        <div class="confirm-payment">
+            <span>
+                <h2>Konfirmasi Penarikan</h2>
+            </span>
+            <div class="method">
+                <h3>Metode Penarikan</h3>
+                <p id="payment-number"></p>
+                <p id="payment-id"></p>
+            </div>
+            <div class="details">
+                <p class="desc">Tanggal</p><p id="tanggal-payment"></p>
+                <p class="desc">Waktu</p><p id="waktu-payment"></p>
+                <p class="desc">Jumlah Ditarik</p><p id="jumlah"></p>
+                <p class="desc">Pajak</p><p>0%</p>
+                <p class="desc">Biaya Administrasi</p><p>Rp. 2000</p>
+                <p class="desc-utama">Jumlah Pembayaran</p><p id="total"></p>
+            </div>
+            <div class="button-pay">
+                <button id="cancel-payment" onclick="cancelPayment()">BATALKAN</button>
+                <button id="confirm-payment" onclick="confirmPayment()">TARIK SEKARANG</button>
+            </div>
+        </div>
+    </section>
+    <script src="../script/withdrawal.js"></script>
+    <script type="module" src="../script/withdrawal.mjs"></script>
+</body>
+</html>

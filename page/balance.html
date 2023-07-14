@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay Cinema</title>
+    <link rel="stylesheet" href="../style/balance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="../index.html"><img src="../img/Home.png" alt=""></a>
+        <div>
+            <h1 id="balance-title"></h1>
+        </div>
+    </header>
+    <main>
+        <div class="balance-nominal" id="balance-nominal">
+            <h2>Your Balance</h2>
+            <div id="balance-value">
+                <img src="../img/wallet.png" alt="">
+                <p id="balance-nominal-value"></p>
+                <div class="button-topupandwd">
+                    <div class="topup">
+                        <a href="topup.html" id="topup">Top Up</a>
+                    </div>
+                    <div class="topup">
+                        <a href="withdrawal.html" id="withdrawal">Withdrawal</a>
+                    </div>
+                </div>
+            </div>
+            <h2>Payment Information</h2>
+            <div id="payment-method-collection"></div>
+            <button id="payment-method" onclick="addPayment()">Add New Payment Method</button>
+
+            <form id="input-payment">
+                <button class="close" onclick="closePopUp()"><img src="../img/close.png" alt=""></button>
+                <div id="payment-radio">
+                    <div class="radio-child">
+                        <label for="gopay">
+                            <input type="radio" value="gopay" id="gopay" name="payment-method-choose" required>
+                            Gopay
+                        </label>
+                    </div>
+                    <div class="radio-child">
+                        <label for="ovo">
+                            <input type="radio" value="ovo" id="ovo" name="payment-method-choose" required>
+                            Ovo
+                        </label>
+                    </div>
+                    <div class="radio-child">
+                        <label for="dana">
+                            <input type="radio" value="dana" id="dana" name="payment-method-choose" required>
+                            Dana
+                        </label>
+                    </div>
+                </div>
+                <div class="nomor-container" id="nomor-container">
+                    <label for="nomor"></label>
+                    <input type="text" id="nomor" placeholder="Masukkan nomor Anda Disini" required>
+                </div>
+                <div class="button-input">
+                    <button id="submit">Add Payment Method</button>
+                </div>
+            </form>
+        </div>
+        <div class="history" id="history">
+            <h2>Payment History & Ticket</h2>
+        </div>
+    </main>
+    <footer>  
+    </footer>
+    <script src="../script/balance.js"></script>
+    <script type="module" src="../script/balance.mjs"></script>
+</body>
+</html>
